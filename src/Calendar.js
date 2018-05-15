@@ -97,6 +97,8 @@ class Calendar extends React.Component {
     */
    onNavigate: PropTypes.func,
 
+   customNavigate: PropTypes.func,
+
    /**
     * Callback fired when the `view` value changes.
     *
@@ -626,6 +628,7 @@ class Calendar extends React.Component {
            label={viewLabel(current, view, formats, culture)}
            onViewChange={this.handleViewChange}
            onNavigate={this.handleNavigate}
+           customNavigate={this.customNavigate}
            messages={this.props.messages}
          />
        }
@@ -648,6 +651,11 @@ class Calendar extends React.Component {
        />
      </div>
    );
+ }
+
+ customNavigate = () => {
+   let { customNavigate } = this.props;
+   customNavigate()
  }
 
  handleNavigate = (action, newDate) => {

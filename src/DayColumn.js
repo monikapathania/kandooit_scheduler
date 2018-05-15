@@ -296,6 +296,7 @@ class DaySlot extends React.Component {
             })}
           >
             <div className='rbc-event-label rbc-event-content textoverflow'>
+            <li><i className="fa fa-circle" aria-hidden="true"></i></li>
               {isRecurrence ? <i className="fa fa-repeat pr5" aria-hidden="true"></i> : ''}
               {isAppointmentRendered ? <i className="fa fa-check-circle-o pr5" aria-hidden="true"></i> : ''}
               {isVideoCall ? <i className="fa fa-video-camera pr5" aria-hidden="true"></i> : ''}

@@ -40,7 +40,7 @@ const CustomToolbar = (toolbar) => {
 
       <div className={sCalendar['back-next-buttons']}>
         <button className={sCalendar['btn-back']} onClick={goToBack}>&#8249;</button>
-        <button className={sCalendar['btn-current']} onClick={goToCurrent}>today</button>
+        <button className={sCalendar['btn-current']} onClick={goToCurrent}>todayvxcvxcv</button>
         <button className={sCalendar['btn-next']} onClick={goToNext}>&#8250;</button>
       </div>
     </div >

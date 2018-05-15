@@ -10,7 +10,11 @@ const Formats = {
   [views.WORK_WEEK]: 'dayRangeHeaderFormat',
   [views.DAY]: 'dayHeaderFormat',
   [views.AGENDA]: 'agendaHeaderFormat',
-  [views.RESOURCE]: 'dayHeaderFormat'
+  [views.RESOURCE]: 'dayHeaderFormat',
+  [views.STATUS]: 'dayHeaderFormat'
+
+
+
 }
 
 function getRangeBounds(range) {
