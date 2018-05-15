@@ -146,6 +146,7 @@ class Dnd extends React.Component {
         events={this.state.events}
         // events={resources.events}
         resources={resources.list}
+        views={['month', 'week', 'resource', 'agenda', 'status']}
         statusHeadings={[{id:1, title: 'connected'}, {id:2, title: 'Confirmed'}]}
         // slotProp={this.slotPropGetter(date)}
         // slotPropGetter={(date) => this.slotPropGetter(date) }

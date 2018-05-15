@@ -7,7 +7,7 @@ import invariant from 'invariant';
   allDay: 'all day',
   week: 'week',
   work_week: 'work week',
-  day: 'day',
+  // day: 'day',
   month: 'month',
   previous: 'back',
   next: 'next',
@@ -15,7 +15,7 @@ import invariant from 'invariant';
   tomorrow: 'tomorrow',
   today: 'today',
   agenda: 'List View',
-  resource: 'Staff View',
+  resource: 'Day',
   status: 'Status',
 
   showMore: total => `+${total} more`

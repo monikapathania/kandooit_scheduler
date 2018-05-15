@@ -224,13 +224,13 @@ export default {
   ],
 
   list: [{
-    id: 115,
+    id: 'a',
     title: 'Room A'
   }, {
-    id: 52,
+    id: 'b',
     title: 'Room B'
   }, {
-    id: 53,
+    id: 'c',
     title: 'Room C'
   }]
 }
