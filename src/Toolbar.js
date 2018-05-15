@@ -46,12 +46,12 @@ class Toolbar extends React.Component {
         {
           this.viewNamesGroup(messages)
         }
-        <button
+        {/* <button
             type='button'
             onClick={this.customNavigate.bind(null, navigate.TODAY)}
           >
             Test
-          </button>
+          </button> */}
         </span>
 
       </div>
