@@ -148,7 +148,7 @@ class EventCell extends React.Component {
         >
           <div className='rbc-event-content'>
           <ul className="quickview">
-            <li><i className="fa fa-circle" aria-hidden="true"></i></li>
+            <i className="fa fa-circle" aria-hidden="true"></i>
             {isRecurrence === true ? <li><i className="fa fa-repeat" aria-hidden="true"></i></li> : ''}
             {isAppointmentRendered ? <li><i className="fa fa-check-circle-o" aria-hidden="true"></i></li> : ''}
             {isVideoCall ? <li><i className="fa fa-video-camera" aria-hidden="true"></i></li> : ''}

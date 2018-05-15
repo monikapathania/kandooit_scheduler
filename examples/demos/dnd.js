@@ -149,6 +149,7 @@ class Dnd extends React.Component {
         statusHeadings={[{id:1, title: 'connected'}, {id:2, title: 'Confirmed'}]}
         // slotProp={this.slotPropGetter(date)}
         // slotPropGetter={(date) => this.slotPropGetter(date) }
+        customNavigate={() => alert('customNavigate')}
         usersAvailability = {this.state.usersAvailability}
         onEventDrop={this.moveEvent}
         defaultView='month'

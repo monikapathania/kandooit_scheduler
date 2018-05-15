@@ -13,6 +13,7 @@ class Toolbar extends React.Component {
     label: PropTypes.node.isRequired,
     messages: PropTypes.object,
     onNavigate: PropTypes.func.isRequired,
+    customNavigate: PropTypes.func,
     onViewChange: PropTypes.func.isRequired,
   }
 
@@ -23,14 +24,10 @@ class Toolbar extends React.Component {
 
     return (
       <div className='rbc-toolbar'>
-
-      <span className="rbc-btn-group">
-        <button
-          type='button'
-          onClick={this.navigate.bind(null, navigate.TODAY)}
-        >
-          {messages.today}
-        </button>
+      <span className='rbc-toolbar-label monthlabel'>
+        { label }
+      </span>
+      <span className="next_pri-btn">
           <button type='button' onClick={this.navigate.bind(null, navigate.PREVIOUS)}>
             <i className="fa fa-angle-left" aria-hidden="true"></i>
           </button>
@@ -38,19 +35,31 @@ class Toolbar extends React.Component {
               <i className="fa fa-angle-right" aria-hidden="true"></i>
           </button>
       </span>
-      <span className='rbc-toolbar-label'>
-        { label }
-      </span>
         {/*<span className='rbc-btn-group todaybtn'>*/}
-        <span className='rbc-btn-group'>
-
+        <span className='rbc-btn-group monthweekbtn'>
+          <button
+            type='button'
+            onClick={this.navigate.bind(null, navigate.TODAY)}
+          >
+            {messages.today}
+          </button>
         {
           this.viewNamesGroup(messages)
         }
+        <button
+            type='button'
+            onClick={this.customNavigate.bind(null, navigate.TODAY)}
+          >
+            Test
+          </button>
         </span>
 
       </div>
     );
+  }
+
+  customNavigate = () => {
+    this.props.customNavigate();
   }
 
   navigate = (action) => {

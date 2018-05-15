@@ -298,7 +298,7 @@ class Calendar extends React.Component {
    isVideoCallAccessor: accessor,
    isAppoinmentCancelledAccessor: accessor,
    practitionerNameAccessor: accessor,
-   
+
 
    usersAvailability: PropTypes.object,
 
