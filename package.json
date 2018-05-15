@@ -1,9 +1,9 @@
 {
-  "name": "react-scheduler-smartdata",
-  "version": "0.7.17",
+  "name": "kandooit_scheduler",
+  "version": "0.0.1",
   "description": "Calendar! with events",
-  "author": "Manish Kumar",
-  "repository": "https://github.com/manishksmd/react-scheduler.git",
+  "author": "Monika Singh",
+  "repository": "https://github.com/monikapathania/kandooit_scheduler.git",
   "main": "lib/index.js",
   "style": "lib/css/react-big-calendar.css",
   "files": [
