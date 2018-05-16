@@ -7,7 +7,7 @@ import invariant from 'invariant';
   allDay: 'all day',
   week: 'week',
   work_week: 'work week',
-  day: 'day',
+  // day: 'day',
   month: 'month',
   previous: 'back',
   next: 'next',
