@@ -68,12 +68,12 @@ class Toolbar extends React.Component {
                 || document.documentElement.clientWidth
                 || document.body.clientWidth;
 
-    let viewType = (width < 768) ? 'day' : 'month';
+    let viewType = (width < 768) ? 'agenda' : 'month';
 
     if (viewNames.length > 1) {
 
-      if (viewType === 'day') {
-        viewNames = ['day'];
+      if (viewType === 'agenda') {
+        viewNames = ['agenda'];
       }
       return (
         viewNames.map(name =>
