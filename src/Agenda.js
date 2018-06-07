@@ -20,7 +20,7 @@ class Agenda extends React.Component {
     length: PropTypes.number.isRequired,
     titleAccessor: accessor.isRequired,
     patientNameAccessor: accessor.isRequired,
-    staffsAccessor: accessor.isRequired,
+    clinicianNameAccessor: accessor.isRequired,
     appointmentTypeAccessor: accessor.isRequired,
     statusAccessor: accessor.isRequired,
     allDayAccessor: accessor.isRequired,
@@ -95,7 +95,7 @@ class Agenda extends React.Component {
   renderDay = (day, events, dayKey) => {
     let {
         culture, components
-      , titleAccessor, agendaDateFormat, patientNameAccessor, staffsAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
+      , titleAccessor, agendaDateFormat, patientNameAccessor, clinicianNameAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
 
     let EventComponent = components.event;
     let DateComponent = components.date;
@@ -116,9 +116,13 @@ class Agenda extends React.Component {
 
       let title = get(event, titleAccessor);
       let patientName = get(event, patientNameAccessor);
-      let staffName = get(event, staffsAccessor);
+      let staffName = get(event, clinicianNameAccessor);
       let apptType = get(event, appointmentTypeAccessor);
       let statusName = get(event, statusAccessor);
+      let patient_name = <b>Patient Name</b>;
+      let staff_name = <b>Staff Name</b>;
+      let apptType_name = <b>Appointment Type</b>;
+      let status_name = <b>Status</b>;
 
       return (
         <tr key={dayKey + '_' + idx}>
@@ -127,7 +131,7 @@ class Agenda extends React.Component {
             { this.timeRangeLabel(day, event) }
           </td>
           <td className='rbc-agenda-event-cell'>
-          { EventComponent ? <EventComponent event={event} title={title}/> : `Patient Name: ${patientName} Staff Name: ${staffName} Appointment Type: ${apptType} Status: ${statusName}` }
+          { EventComponent ? <EventComponent event={event} title={title}/> : `${patient_name}: ${patientName} ${staff_name}: ${staffName} ${apptType_name}: ${apptType} ${status_name}: ${statusName}` }
           </td>
         </tr>
       )
