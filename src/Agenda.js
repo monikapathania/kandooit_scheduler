@@ -119,10 +119,7 @@ class Agenda extends React.Component {
             { this.timeRangeLabel(day, event) }
           </td>
           <td className='rbc-agenda-event-cell'>
-            { EventComponent
-                ? <EventComponent event={event} title={title}/>
-                : title
-            }
+          { EventComponent ? <EventComponent event={event} title={title}/> : `Appointment Title: ${title}` }
           </td>
         </tr>
       )
