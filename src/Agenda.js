@@ -131,10 +131,11 @@ class Agenda extends React.Component {
           <td className='rbc-agenda-event-cell'>
           { EventComponent ? <EventComponent event={event} title={title}/> :
           <ul className="list-view">
-            <li><label>Patient Name</label>{patientName} </li>
-            <li><label>Staff Name</label>{staffName} </li>
-            <li><label>Appointment Type</label>{apptType} </li>
-            <li><label>Status</label>{statusName} </li>
+            <li><label>Patient Name: </label>{patientName} </li>
+            <li><label>Staff Name: </label>{staffName} </li>
+            <li><label>Appointment Type: </label>{apptType} </li>
+            <li><label>Location: </label>{addressType} </li>
+            <li><label>Status: </label>{statusName} </li>
             </ul> }
           </td>
         </tr>
