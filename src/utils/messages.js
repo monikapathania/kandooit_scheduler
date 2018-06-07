@@ -3,7 +3,7 @@ import invariant from 'invariant';
  let defaultMessages = {
   date: 'Date',
   time: 'Time',
-  event: 'Event',
+  event: 'Appointment Information',
   allDay: 'all day',
   week: 'week',
   work_week: 'work week',
