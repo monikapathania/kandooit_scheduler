@@ -3,6 +3,7 @@ export default {
   {
     'title': 'Mmmmmmmmmmmmmmmmmm',
     'isRecurrence': true,
+    'status': 'Confirmed',
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
     'clinicianName': 'Dr Emmaaaaaaaaa Anderson',
@@ -36,6 +37,7 @@ export default {
     'isDelete': true,
   }, {
     'title': 'Bbbbbbbbbbbbbb',
+    'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -60,6 +62,7 @@ export default {
     'cancellationReason': 'not defined',
   }, {
     'title': 'Aaaaaaaaa',
+    'status': 'Confirmed',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -84,6 +87,7 @@ export default {
     'cancellationReason': 'Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy',
   }, {
     'title': 'Ccccccccccccc',
+    'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -98,6 +102,7 @@ export default {
     'end': new Date(2017, 9, 4, 7, 30, 0, 0),
   }, {
     'title': 'Smartdata Events',
+    'status': 'Confirmed',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -112,6 +117,7 @@ export default {
     'end': new Date(2017, 8, 7, 10, 30, 0, 0),
   }, {
     'title': 'Another Meeting',
+    'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -128,6 +134,7 @@ export default {
   },
   {
     'title': 'Another Meeting 1',
+    'status': 'Confirmed',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -143,6 +150,7 @@ export default {
   },
   {
     'title': 'Another Meeting 2',
+    'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -157,6 +165,7 @@ export default {
   },
   {
     'title': 'Another Meeting 3',
+    'status': 'Confirmed',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -170,6 +179,7 @@ export default {
   },
   {
     'title': 'Another Meeting 4',
+    'status': 'Confirmed',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -183,6 +193,7 @@ export default {
   },
   {
     'title': 'Another Meeting 5',
+    'status': 'Cancelled',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -196,6 +207,7 @@ export default {
   },
   {
     'title': 'Another Meeting 6',
+    'status': 'Cancelled',
     'isRecurrence': false,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',
@@ -209,6 +221,7 @@ export default {
   },
   {
     'title': 'Another Meeting',
+    'status': 'Cancelled',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': 'https://pbs.twimg.com/profile_images/378800000740775432/9f1501a967b89c2a2cdeb5f7eaaf9787.jpeg',

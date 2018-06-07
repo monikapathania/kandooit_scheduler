@@ -119,10 +119,10 @@ class Agenda extends React.Component {
       let staffName = get(event, clinicianNameAccessor);
       let apptType = get(event, appointmentTypeAccessor);
       let statusName = get(event, statusAccessor);
-      let patient_name = <b>Patient Name</b>;
-      let staff_name = <b>Staff Name</b>;
-      let apptType_name = <b>Appointment Type</b>;
-      let status_name = <b>Status</b>;
+      let patient_name = 'Patient Name';
+      let staff_name = 'Staff Name';
+      let apptType_name = 'Appointment Type';
+      let status_name = 'Status';
 
       return (
         <tr key={dayKey + '_' + idx}>
