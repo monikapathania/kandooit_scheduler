@@ -23,6 +23,7 @@ class Agenda extends React.Component {
     staffNameAccessor: accessor.isRequired,
     appointmentTypeAccessor: accessor.isRequired,
     statusAccessor: accessor.isRequired,
+    addressTypeAccessor: accessor.isRequired,
     allDayAccessor: accessor.isRequired,
     startAccessor: accessor.isRequired,
     endAccessor: accessor.isRequired,
@@ -95,7 +96,7 @@ class Agenda extends React.Component {
   renderDay = (day, events, dayKey) => {
     let {
         culture, components
-      , titleAccessor, agendaDateFormat, patientNameAccessor, staffNameAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
+      , titleAccessor, agendaDateFormat, patientNameAccessor, staffNameAccessor, appointmentTypeAccessor, statusAccessor, addressTypeAccessor} = this.props;
 
     let EventComponent = components.event;
     let DateComponent = components.date;
@@ -119,6 +120,7 @@ class Agenda extends React.Component {
       let staffName = get(event, staffNameAccessor);
       let apptType = get(event, appointmentTypeAccessor);
       let statusName = get(event, statusAccessor);
+      let addressType = get(event, addressTypeAccessor)
 
       return (
         <tr key={dayKey + '_' + idx}>
