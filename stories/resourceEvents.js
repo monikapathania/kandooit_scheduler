@@ -2,6 +2,7 @@ export default {
   events: [
   {
     'title': 'Mmmmmmmmmmmmmmmmmm',
+    'staffName': 'Hommer Hart, Andrew Smith, Micheal Andrew',
     'isRecurrence': true,
     'status': 'Confirmed',
     'patientName': 'SSSSSSSSSSSSS',
@@ -37,6 +38,7 @@ export default {
     'isDelete': true,
   }, {
     'title': 'Bbbbbbbbbbbbbb',
+    'staffName': 'Hommer Hart, Andrew Smith, Micheal Andrew',
     'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
@@ -87,6 +89,7 @@ export default {
     'cancellationReason': 'Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy',
   }, {
     'title': 'Ccccccccccccc',
+    'staffName': 'Hommer Hart, Andrew Smith, Micheal Andrew',
     'status': 'Confirmed',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',

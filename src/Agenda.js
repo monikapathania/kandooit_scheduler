@@ -20,7 +20,7 @@ class Agenda extends React.Component {
     length: PropTypes.number.isRequired,
     titleAccessor: accessor.isRequired,
     patientNameAccessor: accessor.isRequired,
-    clinicianNameAccessor: accessor.isRequired,
+    staffNameAccessor: accessor.isRequired,
     appointmentTypeAccessor: accessor.isRequired,
     statusAccessor: accessor.isRequired,
     allDayAccessor: accessor.isRequired,
@@ -95,7 +95,7 @@ class Agenda extends React.Component {
   renderDay = (day, events, dayKey) => {
     let {
         culture, components
-      , titleAccessor, agendaDateFormat, patientNameAccessor, clinicianNameAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
+      , titleAccessor, agendaDateFormat, patientNameAccessor, staffNameAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
 
     let EventComponent = components.event;
     let DateComponent = components.date;
@@ -116,13 +116,9 @@ class Agenda extends React.Component {
 
       let title = get(event, titleAccessor);
       let patientName = get(event, patientNameAccessor);
-      let staffName = get(event, clinicianNameAccessor);
+      let staffName = get(event, staffNameAccessor);
       let apptType = get(event, appointmentTypeAccessor);
       let statusName = get(event, statusAccessor);
-      let patient_name = 'Patient Name';
-      let staff_name = 'Staff Name';
-      let apptType_name = 'Appointment Type';
-      let status_name = 'Status';
 
       return (
         <tr key={dayKey + '_' + idx}>
@@ -131,7 +127,13 @@ class Agenda extends React.Component {
             { this.timeRangeLabel(day, event) }
           </td>
           <td className='rbc-agenda-event-cell'>
-          { EventComponent ? <EventComponent event={event} title={title}/> : `${patient_name}: ${patientName} ${staff_name}: ${staffName} ${apptType_name}: ${apptType} ${status_name}: ${statusName}` }
+          { EventComponent ? <EventComponent event={event} title={title}/> :
+          <ul className="list-view">
+            <li><label>Patient Name</label>{patientName} </li>
+            <li><label>Staff Name</label>{staffName} </li>
+            <li><label>Appointment Type</label>{apptType} </li>
+            <li><label>Status</label>{statusName} </li>
+            </ul> }
           </td>
         </tr>
       )
