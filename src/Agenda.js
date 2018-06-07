@@ -19,6 +19,10 @@ class Agenda extends React.Component {
     date: PropTypes.instanceOf(Date),
     length: PropTypes.number.isRequired,
     titleAccessor: accessor.isRequired,
+    patientNameAccessor: accessor.isRequired,
+    staffsAccessor: accessor.isRequired,
+    appointmentTypeAccessor: accessor.isRequired,
+    statusAccessor: accessor.isRequired,
     allDayAccessor: accessor.isRequired,
     startAccessor: accessor.isRequired,
     endAccessor: accessor.isRequired,
@@ -91,7 +95,7 @@ class Agenda extends React.Component {
   renderDay = (day, events, dayKey) => {
     let {
         culture, components
-      , titleAccessor, agendaDateFormat } = this.props;
+      , titleAccessor, agendaDateFormat, patientNameAccessor, staffsAccessor, appointmentTypeAccessor, statusAccessor} = this.props;
 
     let EventComponent = components.event;
     let DateComponent = components.date;
@@ -110,7 +114,11 @@ class Agenda extends React.Component {
             </td>
           ) : false
 
-      let title = get(event, titleAccessor)
+      let title = get(event, titleAccessor);
+      let patientName = get(event, patientNameAccessor);
+      let staffName = get(event, staffsAccessor);
+      let apptType = get(event, appointmentTypeAccessor);
+      let statusName = get(event, statusAccessor);
 
       return (
         <tr key={dayKey + '_' + idx}>
@@ -119,7 +127,7 @@ class Agenda extends React.Component {
             { this.timeRangeLabel(day, event) }
           </td>
           <td className='rbc-agenda-event-cell'>
-          { EventComponent ? <EventComponent event={event} title={title}/> : `Appointment Title: ${title}` }
+          { EventComponent ? <EventComponent event={event} title={title}/> : `Patient Name: ${patientName} Staff Name: ${staffName} Appointment Type: ${apptType} Status: ${statusName}` }
           </td>
         </tr>
       )
