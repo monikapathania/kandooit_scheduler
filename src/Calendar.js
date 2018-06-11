@@ -520,7 +520,7 @@ class Calendar extends React.Component {
    date: now,
    step: 30,
 
-   drilldownView: views.DAY,
+   drilldownView: views.RESOURCE,
 
    titleAccessor: 'title',
    patientNameAccessor: 'patientName',
