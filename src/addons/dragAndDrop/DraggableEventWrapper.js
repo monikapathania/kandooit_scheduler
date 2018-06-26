@@ -37,10 +37,11 @@ class DraggableEventWrapper extends React.Component {
         isDragging && 'rbc-addons-dnd-dragging'
       )
     })
-
+    
+    let draggableEvent = (event.isDragable && connectDragSource(children)) || children; // disable drag for specific events
     return (
       <EventWrapper event={event}>
-        {connectDragSource(children)}
+        {draggableEvent}
       </EventWrapper>
     );
   }

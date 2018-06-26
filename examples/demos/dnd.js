@@ -101,11 +101,12 @@ class Dnd extends React.Component {
     this.moveEvent = this.moveEvent.bind(this)
   }
 
-  moveEvent({ event, start, end }) {
+  moveEvent({ event, start, end, ...rest }) {
     const { events } = this.state;
 
     const idx = events.indexOf(event);
-    const updatedEvent = { ...event, start, end };
+    const resourceId = rest.resource || event.resourceId;
+    const updatedEvent = { ...event, start, end, resourceId };
 
     const nextEvents = [...events]
     nextEvents.splice(idx, 1, updatedEvent)

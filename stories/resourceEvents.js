@@ -36,6 +36,7 @@ export default {
     'isRecurrenceEdit': false,
     'isEdit': true,
     'isDelete': true,
+    'isDragable': true,
   }, {
     'title': 'Bbbbbbbbbbbbbb',
     'staffName': 'Hommer Hart, Andrew Smith, Micheal Andrew',
@@ -62,6 +63,8 @@ export default {
     'practitionerName': 'Bbbb singh',
     'isUnCancel': true,
     'cancellationReason': 'not defined',
+    'isDragable': true,
+
   }, {
     'title': 'Aaaaaaaaa',
     'status': 'Confirmed',
@@ -103,6 +106,8 @@ export default {
     'resourceId': 'a',
     'start': new Date(2017, 9, 4, 6, 0, 0, 0),
     'end': new Date(2017, 9, 4, 7, 30, 0, 0),
+    'isDragable': true,
+
   }, {
     'title': 'Smartdata Events',
     'status': 'Confirmed',
@@ -118,6 +123,8 @@ export default {
     'resourceId': 'a',
     'start': new Date(2017, 8, 7, 5, 30, 0, 0),
     'end': new Date(2017, 8, 7, 10, 30, 0, 0),
+    'isDragable': true,
+
   }, {
     'title': 'Another Meeting',
     'status': 'Confirmed',
@@ -134,6 +141,8 @@ export default {
     'statusId':1,
     'start': new Date(2017, 8, 8, 2, 30, 0, 0),
     'end': new Date(2017, 8, 8, 4, 30, 0, 0),
+    'isDragable': true,
+
   },
   {
     'title': 'Another Meeting 1',
@@ -150,6 +159,8 @@ export default {
     'statusId':1,
     'start': new Date(2017, 8, 9, 4, 0, 0, 0),
     'end': new Date(2017, 8, 9, 4, 15, 0, 0),
+    'isDragable': true,
+
   },
   {
     'title': 'Another Meeting 2',
@@ -165,6 +176,8 @@ export default {
     'resourceId': 'c',
     'start': new Date(2017, 8, 9, 4, 0, 0, 0),
     'end': new Date(2017, 8, 9, 4, 15, 0, 0),
+    'isDragable': true,
+
   },
   {
     'title': 'Another Meeting 3',
