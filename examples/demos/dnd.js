@@ -98,7 +98,9 @@ class Dnd extends React.Component {
 
     }
 
-    this.moveEvent = this.moveEvent.bind(this)
+    this.moveEvent = this.moveEvent.bind(this);
+    this.resizeEvent = this.resizeEvent.bind(this);
+
   }
 
   moveEvent({ event, start, end, ...rest }) {
@@ -139,6 +141,29 @@ class Dnd extends React.Component {
     }
   }
 
+  resizeEvent = (resizeType, { event, start, end }) => {
+    const { events } = this.state
+
+    // const nextEvents = events.map(existingEvent => {
+    //   return existingEvent.id == event.id
+    //     ? { ...existingEvent, start, end }
+    //     : existingEvent
+    // })
+
+    const idx = events.indexOf(event);
+    // const resourceId = rest.resource || event.resourceId;
+    const updatedEvent = { ...event, start, end };
+
+    const nextEvents = [...events]
+    nextEvents.splice(idx, 1, updatedEvent)
+
+    this.setState({
+      events: nextEvents,
+    })
+
+    alert(`${event.title} was resized to ${start}-${end}`)
+  }
+
 
   render(){
     return (
@@ -153,6 +178,10 @@ class Dnd extends React.Component {
         // slotPropGetter={(date) => this.slotPropGetter(date) }
         customNavigate={() => alert('customNavigate')}
         usersAvailability = {this.state.usersAvailability}
+        resizable
+        onEventResize={this.resizeEvent}
+        draggableAccessor= 'isDragable'
+   resizableAccessor= 'isDragable'
         onEventDrop={this.moveEvent}
         defaultView='month'
         defaultDate={new Date(2018, 1, 14)}
