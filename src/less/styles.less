@@ -174,7 +174,6 @@ div.rbc-month-row .available-slot-color { background-color: @available-slot-colo
   display: block !important;
 }
 /* end custom css for the drag and drop event */
-
 .appointment_box {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.02);
@@ -183,9 +182,8 @@ div.rbc-month-row .available-slot-color { background-color: @available-slot-colo
   left: 0;
   top: 0;
   margin: 0px auto;
-  width: 200px;
-  height: 100%;
-  position: fixed;
+  width: 268px;
+  position: absolute;
   display: none;
   z-index: 10000;
 }
@@ -308,7 +306,7 @@ div.rbc-month-row .available-slot-color { background-color: @available-slot-colo
 }
 /*for month*/
 .rbc-row-segment{position: relative;}
-/*.appointment_box.month_box {
+.appointment_box.month_box {
   left: 100%;
   right: inherit;
 }
@@ -321,20 +319,46 @@ div.rbc-month-row .available-slot-color { background-color: @available-slot-colo
   position: absolute;
   top: 5px;
   z-index: 11;
-}*/
-
+}
+.custom-class-sat .appointment_box.dayslot,
+.custom-class-7 .appointment_box.month_box, .custom-class-6 .appointment_box.month_box,
+.custom-class-7 .appointment_box.dayslot, .custom-class-6 .appointment_box.dayslot {
+  left: auto;
+  right: 100%;
+}
+.custom-class-sat .appointment_box:before,
+.custom-class-7 .appointment_box.month_box::before, .custom-class-6 .appointment_box.month_box:before,
+.custom-class-7 .appointment_box.dayslot::before, .custom-class-6 .appointment_box.dayslot:before {
+  left: auto;
+  right: -15px;
+  transform: rotate(180deg);
+}
 .rbc-row-content
 {
   z-index: inherit;
 }
 .rbc-date-cell{min-height: 55px;}
-
+.rbc-month-view .rbc-month-row:nth-last-child(1) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box,
+.rbc-month-view .rbc-month-row:nth-last-child(2) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box,
+.rbc-month-view .rbc-month-row:nth-last-child(3) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box,
+.appointment_box.hoverup {
+    top: initial;
+    bottom: 0px;
+}
+.rbc-month-view .rbc-month-row:nth-last-child(1) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box::before,
+.rbc-month-view .rbc-month-row:nth-last-child(2) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box::before,
+.rbc-month-view .rbc-month-row:nth-last-child(3) .rbc-row-content .rbc-row .rbc-row-segment .rbc-event-content .appointment_box.month_box::before,
+.appointment_box.hoverup:before {
+    top: inherit;
+    bottom: 0px;
+    border-right-color: #fff;
+}
 /*Day appointment*/
-/*.appointment_box.dayslot {
+.appointment_box.dayslot {
   left: 0px;
   right: inherit;
   width: 200px;
-}*/
+}
 .rbc-day-slot .rbc-event {
   display: block !important;
   height: auto;
