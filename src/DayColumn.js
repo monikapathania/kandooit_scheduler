@@ -265,9 +265,9 @@ class DaySlot extends React.Component {
       let getEndHour = end.getHours();
 
       if (getEndHour > 17) {
-        viewClass = this.props.view === 'week' ? 'appointment_box dayslot hoverup' : 'appointment_box hoverup';
+        viewClass = 'appointment_box dayslot hoverup';
       } else {
-        viewClass = this.props.view === 'week' ? 'appointment_box dayslot' : 'appointment_box';
+        viewClass = 'appointment_box dayslot';
       }
 
       let dayClass = this.props.view === 'day' ? 'colwrap' : '';
