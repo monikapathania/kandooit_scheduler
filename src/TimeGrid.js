@@ -249,7 +249,7 @@ export default class TimeGrid extends Component {
           />
           { this.renderHeaderCells(range) }
         </div>
-        <div className='rbc-row'>
+        {/* <div className='rbc-row'>
           <div
             ref={ref => this._gutters[0] = ref}
             className='rbc-label rbc-header-gutter'
@@ -277,7 +277,7 @@ export default class TimeGrid extends Component {
             selected={this.props.selected}
             onSelect={this.handleSelectEvent}
           />
-        </div>
+        </div> */}
       </div>
     )
   }
