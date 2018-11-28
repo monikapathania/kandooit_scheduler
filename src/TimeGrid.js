@@ -172,7 +172,7 @@ export default class TimeGrid extends Component {
 
     allDayEvents.sort((a, b) => sortEvents(a, b, this.props))
 
-    let gutterRef = ref => this._gutters[1] = ref && findDOMNode(ref);
+    let gutterRef = ref => this._gutters[0] = ref && findDOMNode(ref);
 
     return (
       <div className='rbc-time-view'>
@@ -232,7 +232,6 @@ export default class TimeGrid extends Component {
     let style = {};
     if (isOverflowing)
       style[rtl ? 'marginLeft' : 'marginRight'] = scrollbarSize() + 'px';
-
     return (
       <div
         ref='headerCell'

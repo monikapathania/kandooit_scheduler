@@ -234,7 +234,6 @@ export default class ResourceGrid extends Component {
     let style = {};
     if (isOverflowing)
       style[rtl ? 'marginLeft' : 'marginRight'] = scrollbarSize() + 'px';
-
     return (
       <div
         ref='headerCell'
