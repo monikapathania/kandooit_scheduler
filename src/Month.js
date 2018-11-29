@@ -249,7 +249,7 @@ class MonthView extends React.Component {
         isVideoCallAccessor={isVideoCallAccessor}
         isAppoinmentCancelledAccessor={isAppoinmentCancelledAccessor}
         practitionerNameAccessor={practitionerNameAccessor}
-        appointmentStatusColor={appointmentStatusColorAccessor}
+        appointmentStatusColorAccessor={appointmentStatusColorAccessor}
         usersAvailability={usersAvailability}
         startAccessor={startAccessor}
         endAccessor={endAccessor}

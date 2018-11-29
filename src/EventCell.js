@@ -149,6 +149,7 @@ class EventCell extends React.Component {
           })}
           // onClick={(e) => onSelect(event, e)}
         >
+        {console.log('appointmentStatusColor---', appointmentStatusColor)}
           <div className='rbc-event-content'>
           <ul className="quickview">
             <i style = {{color: appointmentStatusColor}} className="fa fa-circle" aria-hidden="true"></i>

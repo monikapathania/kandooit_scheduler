@@ -41,7 +41,7 @@ export default {
     'isDragable': true,
   }, {
     'title': 'Bbbbbbbbbbbbbb',
-    'appointmentStatusColor': '#00000',
+    'appointmentStatusColor': '#18B21B',
     'isRecurrence': true,
     'patientName': 'SSSSSSSSSSSSS',
     'clinicianImage': '../src/img/doctor.png',

@@ -122,7 +122,7 @@ export default {
         isVideoCallAccessor={isVideoCallAccessor}
         isAppoinmentCancelledAccessor={isAppoinmentCancelledAccessor}
         practitionerNameAccessor={practitionerNameAccessor}
-        appointmentStatusColor={appointmentStatusColorAccessor}
+        appointmentStatusColorAccessor={appointmentStatusColorAccessor}
         allDayAccessor={allDayAccessor}
         usersAvailability={usersAvailability}
         slotStart={start}
