@@ -301,6 +301,7 @@ class Calendar extends React.Component {
    isVideoCallAccessor: accessor,
    isAppoinmentCancelledAccessor: accessor,
    practitionerNameAccessor: accessor,
+   appointmentStatusColorAccessor: accessor,
 
 
    usersAvailability: PropTypes.object,
@@ -551,7 +552,7 @@ class Calendar extends React.Component {
    allDayAccessor: 'allDay',
    startAccessor: 'start',
    endAccessor: 'end',
-
+   appointmentStatusColorAccessor: 'appointmentStatusColor',
    usersAvailability: 'usersAvailability',
  };
 

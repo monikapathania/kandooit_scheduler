@@ -77,6 +77,7 @@ class DaySlot extends React.Component {
     isVideoCallAccessor: accessor,
     isAppoinmentCancelledAccessor: accessor,
     practitionerNameAccessor: accessor,
+    appointmentStatusColorAccessor: accessor,
 
 
     allDayAccessor: accessor.isRequired,
@@ -218,7 +219,8 @@ class DaySlot extends React.Component {
       , isAppointmentRenderedAccessor
       , isVideoCallAccessor
       , isAppoinmentCancelledAccessor
-      , practitionerNameAccessor } = this.props;
+      , practitionerNameAccessor
+      , appointmentStatusColorAccessor } = this.props;
 
 
     let EventComponent = eventComponent
@@ -258,12 +260,11 @@ class DaySlot extends React.Component {
       let isVideoCall = get(event, isVideoCallAccessor);
       let isAppoinmentCancelled = get(event, isAppoinmentCancelledAccessor);
       let practitionerName = get(event, practitionerNameAccessor);
-
+      let appointmentStatusColor = get(event, appointmentStatusColorAccessor);
       let label = localizer.format({ start, end }, eventTimeRangeFormat, culture)
       let _isSelected = isSelected(event, selected)
       let viewClass = '';
       let getEndHour = end.getHours();
-
       if (getEndHour > 17) {
         viewClass = 'appointment_box dayslot hoverup';
       } else {
@@ -296,7 +297,7 @@ class DaySlot extends React.Component {
             })}
           >
             <div className='rbc-event-label rbc-event-content textoverflow'>
-            <i className="fa fa-circle" aria-hidden="true"></i>
+            <i style = {{color: appointmentStatusColor}} className="fa fa-circle" aria-hidden="true"></i>
               {isRecurrence ? <i className="fa fa-repeat pr5" aria-hidden="true"></i> : ''}
               {isAppointmentRendered ? <i className="fa fa-check-circle-o pr5" aria-hidden="true"></i> : ''}
               {isVideoCall ? <i className="fa fa-video-camera pr5" aria-hidden="true"></i> : ''}

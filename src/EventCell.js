@@ -36,6 +36,7 @@ let propTypes = {
   isVideoCallAccessor: accessor,
   isAppoinmentCancelledAccessor: accessor,
   practitionerNameAccessor: accessor,
+  appointmentStatusColorAccessor: accessor,
 
   allDayAccessor: accessor,
   startAccessor: accessor,
@@ -96,6 +97,7 @@ class EventCell extends React.Component {
       , isVideoCallAccessor
       , isAppoinmentCancelledAccessor
       , practitionerNameAccessor
+      , appointmentStatusColorAccessor
       , slotStart
       , slotEnd
       , onSelect
@@ -125,6 +127,7 @@ class EventCell extends React.Component {
       , isVideoCall = get(event, isVideoCallAccessor)
       , isAppoinmentCancelled = get(event, isAppoinmentCancelledAccessor)
       , practitionerName = get(event, practitionerNameAccessor)
+      , appointmentStatusColor= get(event, appointmentStatusColorAccessor)
       , end = get(event, endAccessor)
       , start = get(event, startAccessor)
       , isAllDay = get(event, props.allDayAccessor)
@@ -148,7 +151,7 @@ class EventCell extends React.Component {
         >
           <div className='rbc-event-content'>
           <ul className="quickview">
-            <i className="fa fa-circle" aria-hidden="true"></i>
+            <i style = {{color: appointmentStatusColor}} className="fa fa-circle" aria-hidden="true"></i>
             {isRecurrence === true ? <li><i className="fa fa-repeat" aria-hidden="true"></i></li> : ''}
             {isAppointmentRendered ? <li><i className="fa fa-check-circle-o" aria-hidden="true"></i></li> : ''}
             {isVideoCall ? <li><i className="fa fa-video-camera" aria-hidden="true"></i></li> : ''}

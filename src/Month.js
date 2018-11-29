@@ -67,6 +67,7 @@ let propTypes = {
   isVideoCallAccessor: accessor,
   isAppoinmentCancelledAccessor: accessor,
   practitionerNameAccessor: accessor,
+  appointmentStatusColorAccessor: accessor,
 
   usersAvailability: PropTypes.object,
 
@@ -197,6 +198,7 @@ class MonthView extends React.Component {
       isVideoCallAccessor,
       isAppoinmentCancelledAccessor,
       practitionerNameAccessor,
+      appointmentStatusColorAccessor,
       usersAvailability,
       startAccessor,
       endAccessor,
@@ -247,6 +249,7 @@ class MonthView extends React.Component {
         isVideoCallAccessor={isVideoCallAccessor}
         isAppoinmentCancelledAccessor={isAppoinmentCancelledAccessor}
         practitionerNameAccessor={practitionerNameAccessor}
+        appointmentStatusColor={appointmentStatusColorAccessor}
         usersAvailability={usersAvailability}
         startAccessor={startAccessor}
         endAccessor={endAccessor}
